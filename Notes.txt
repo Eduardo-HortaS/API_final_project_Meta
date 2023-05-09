@@ -1,20 +1,57 @@
 ### Superuser's username is superuser and it's password is 123
 # auth_token --- 2a6a21cc71f63782828905673bbed8cf128fa47f 
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MjA0MTk1MSwiaWF0IjoxNjgzNDAxOTUxLCJqdGkiOiI1YmY5MDgyMmQ3NDY0YjI0OWUzNTA0MTY0MWNmZWRjNSIsInVzZXJfaWQiOjF9.lFKHFM01W-WIHCz8rQZS-vHqOHTAmRuVyFz9DYvxAGs",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1OTkzOTUxLCJpYXQiOjE2ODM0MDE5NTEsImp0aSI6ImMxNmU0NmY0NGQwODQ1YWViZTg0OTUyZWQ5ZmRjNmFkIiwidXNlcl9pZCI6MX0.npnqGS51NSjphypXnEQgrkjh40mh6wbEmvZm-5uAOJQ"
+}
+
 
 ### Manager's username is Mario and his password is pizzaMozar3554
 # auth_token --- 6e4ea0797e833c73b2dc5e4f3968ea62e7587acf
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MjA0MjAyNiwiaWF0IjoxNjgzNDAyMDI2LCJqdGkiOiI5ZDFkMGNjMDNjZDk0OThjOGRmZTU1ZmNiMjI5M2E3NSIsInVzZXJfaWQiOjJ9.dE9QGeSVG90qQD8sg2aVeBGBG7L_P0E6z_P9_E39QMI",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1OTk0MDI2LCJpYXQiOjE2ODM0MDIwMjYsImp0aSI6IjYyNzE2NjlkODQ1YzRiMDQ5ZjU0OWY3MmE0YTE1NThlIiwidXNlcl9pZCI6Mn0.jsQvQYVXQg9wfGUML_YIKWAIgms8GFB4_fKD96mb7pM"
+}
 
 ### Delivery man's username is John and his password is justRock41
 # auth_token --- d5b08c49729a981203c85e0b3652a53f8a122bc5
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MjA0MjAzNiwiaWF0IjoxNjgzNDAyMDM2LCJqdGkiOiJhOWJmMDUxZDg5OTQ0MzFmODlkOWQzMWQzOTFiZjhkYSIsInVzZXJfaWQiOjN9.y-CPdpoiq_ux3bT9Amxr1xBPTGz-EnZbxAMPTwquQW8",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1OTk0MDM2LCJpYXQiOjE2ODM0MDIwMzYsImp0aSI6IjRkYjVjOWZlZDE4NDQyNmY5MDhiMDI5YjMxMDUyYmIzIiwidXNlcl9pZCI6M30.zYDc01Qpt2ipGU93ZqC0OpkGN8JvgI2FO4QBA72eYJA"
+}
+
 
 ### Customer's username is Paul and his password is pastaMan70a
 # auth_token --- 7818c848344cfb437fc1c408df3861a96f696ca4
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MjA0MjA0NiwiaWF0IjoxNjgzNDAyMDQ2LCJqdGkiOiIwZDJhNDk2M2MxOTU0YTZhYjNlMzM0YTY4OThiMjczNyIsInVzZXJfaWQiOjR9.Og_3c_NgsQ9kFFctbj-DHrMkVxNRI425bBbMbUJYc7Y",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1OTk0MDQ2LCJpYXQiOjE2ODM0MDIwNDYsImp0aSI6IjlmNzIxY2RmNzgyNjQ0MGJiOGIzZWQyOWFlNzY2MGU2IiwidXNlcl9pZCI6NH0.6DfVHJlzHXIpe9apKv2ykDmv9e7BNY4BOyImF1oFAzE"
+}
+
 
 ### The user that we'll be setting to manager and later to delivery man:
 # Adrian is his username and his password is Mozarella
 # auth_token --- 2c5e65f61adfa081824c2025ec389de2d62ae1c6
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MjA0MjA1NywiaWF0IjoxNjgzNDAyMDU3LCJqdGkiOiJjZTBkODgwNmRkNjI0NmFlODVmMTdjZTEwZDNjYTc0ZCIsInVzZXJfaWQiOjV9.-lY4cEwvR8b0yYkK5rrWCggFk7SCpIlyVhcwO2Egf84",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1OTk0MDU3LCJpYXQiOjE2ODM0MDIwNTcsImp0aSI6ImU4OGY4NDAxNmM2NjQ1OTFhZmQ2NWNjNjM1MTg3ZmVmIiwidXNlcl9pZCI6NX0.GoMJyRva_rFlUVJP7yowy2IePnwldS7v9CxpM3b_fgg"
+}
 
-## Tokens for each user in Djoser:
+### {
+    "id": 6,
+    "username": "Linus",
+    "email": "linus@gmail.com",
+    "password": "linus"
+    "pbkdf2_sha256$600000$lup7PVgxpcGPAxLeiTVRy4$hety48SuPi7X0x2xABrmye4RUaJ2DgLINMQGT/y9BSY="
+}
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY5MjA0MjkzOCwiaWF0IjoxNjgzNDAyOTM4LCJqdGkiOiJjNDYwNGU5MjgyYzU0MDY3OTMxNmVmNjRiYjBlNGUwNSIsInVzZXJfaWQiOjZ9.dTUt4wn4ftJHNa_nyKXcPnWnz_tZB4NnPEROizpiubg",
+    "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1OTk0OTM4LCJpYXQiOjE2ODM0MDI5MzgsImp0aSI6IjM3YjRlMGY5NGQwNTQ4YjVhYTk4NjE5MDljYTI5MTE4IiwidXNlcl9pZCI6Nn0.knrJT2Q3Cfv8JbvBJLGqdLyEp-pa-jNX2YtU9xoLwUw"
+}
+
+
+
+## Tokens for each user in Djoser: 
 
 # 2c5e65f61adfa081824c2025ec389de2d62ae1c6	Adrian	May 1, 2023, 8:33 p.m.
 # 7818c848344cfb437fc1c408df3861a96f696ca4	Paul	May 1, 2023, 1:45 a.m.

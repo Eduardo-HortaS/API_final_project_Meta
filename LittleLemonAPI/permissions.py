@@ -79,7 +79,7 @@ class IsManager(permissions.BasePermission):
                 return False
         #
         if view.__class__.__name__ == 'ManagerListCreateView':
-            if request.user.groups.filter(name='Manager').exists():
+            if request.user.groups.filter(name='Manager').exists() or request.user.is_staff or request.user.is_superuser:
                 return True
             else: 
                 return False 

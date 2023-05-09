@@ -1,22 +1,40 @@
 
 from django.contrib.auth.models import User, Group
+
+# Testing imports 
+# from django.test import TestCase
+
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.hashers import make_password 
 from decimal import Decimal
 from django.core.paginator import Paginator, EmptyPage
 from django_filters.rest_framework import DjangoFilterBackend 
 from .filters import MenuItemFilter, OrderFilter
 
-from rest_framework import generics, status, filters
+from rest_framework import generics, status, filters, permissions
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
+from rest_framework.views import APIView
 
 from .models import Category, MenuItem, Cart, Order, OrderItem
 from .serializers import GroupSerializer, UserSerializer, MenuItemSerializer, CategorySerializer, CartSerializer, OrderSerializer, OrderItemSerializer
 from .permissions import IsCustomer, IsDeliveryCrew, IsManager
 
+class UserCreateAPIView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [permissions.AllowAny]
 
+    def perform_create(self, serializer):
+        password = make_password(self.request.data.get('password'))  # Hash the password
+        serializer.save(password=password)
+
+class CurrentUserAPIView(APIView):
+    def get(self, request):
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)
 
 class MenuItemListView(generics.ListCreateAPIView):
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
@@ -29,8 +47,6 @@ class MenuItemListView(generics.ListCreateAPIView):
     def get_permissions(self):
         # Allows customers and delivery crew to make GET requests only, but managers can make GET and POST.
         return [permission() for permission in self.permission_classes]
-
-            
             
 class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
@@ -48,7 +64,7 @@ class ManagerListCreateView(generics.ListCreateAPIView):
     serializer_class = UserSerializer
     permission_classes = [IsManager]
     group_name = 'Manager'
-    
+        
     def create(self, request, *args, **kwargs):
         try:
             username_of_interest = request.data.get('username')
@@ -59,7 +75,45 @@ class ManagerListCreateView(generics.ListCreateAPIView):
             return Response(self.serializer_class(user).data, status=status.HTTP_201_CREATED)
         except User.DoesNotExist:
             return Response({'message': 'object not found'}, status=status.HTTP_404_NOT_FOUND)
-        
+
+
+# ### TESTING ADD USER TO MANAGER GROUP FUNCTIONALITY ###
+# class ManagerListCreateViewTestCase(TestCase):
+#     def setUp(self):
+#         self.manager_group = Group.objects.create(name='Manager')
+#         self.manager = User.objects.create_user(username='manager', password='password')
+#         self.manager.groups.add(self.manager_group)
+    
+#     def test_manager_list_create_view_permission(self):
+#             # Simulate an authenticated request by the manager user
+#             self.client.login(username='manager', password='password')
+
+#             # Make a GET request to the ManagerListCreateView
+#             response = self.client.get('/your-api-url/')  # Replace with the actual URL of your view
+
+#             # Assert that the response status code is 200 (OK)
+#             self.assertEqual(response.status_code, 200)
+
+#             # Make assertions on the response data as needed
+
+#             # ...
+
+#             # Simulate an unauthenticated request
+#             self.client.logout()
+
+#             # Make a GET request to the ManagerListCreateView
+#             response = self.client.get('/your-api-url/')  # Replace with the actual URL of your view
+
+#             # Assert that the response status code is 403 (Forbidden)
+#             self.assertEqual(response.status_code, 403)
+
+#             # Make assertions on the response data as needed
+
+#             # ...    
+    
+    
+# ### TESTING ADD USER TO MANAGER GROUP FUNCTIONALITY ###
+    
 class ManagerDestroyView(generics.ListCreateAPIView):
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
     queryset = User.objects.filter(groups__name = 'Manager')
